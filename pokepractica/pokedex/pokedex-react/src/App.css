@@ -1,0 +1,58 @@
+.contenedor-principal {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.cabecera {
+  background-color: var(--rojo-pokedex);
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  color: var(--blanco-texto);
+  text-transform: uppercase;
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+  z-index: 10;
+}
+
+.buscador {
+  padding: 8px 16px;
+  border-radius: 20px;
+  border: none;
+  font-size: 0.9rem;
+  outline: none;
+  width: 200px;
+  box-shadow: inset 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.paneles-divididos {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  overflow: hidden;
+}
+
+.panel-izquierdo {
+  background-color: #333;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  overflow: hidden;
+}
+
+.panel-derecho {
+  background-color: #e0e0e0;
+  overflow-y: scroll;
+  padding: 15px;
+  min-height: 0;
+}
+
+.cargando-texto {
+  text-align: center;
+  padding: 10px;
+  color: #888;
+}

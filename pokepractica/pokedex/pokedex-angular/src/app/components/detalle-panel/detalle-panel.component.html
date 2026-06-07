@@ -1,0 +1,43 @@
+@if (pokemonDetalles) {
+  <div class="panel-datos">
+    
+    <div class="dato-fila">
+      <span class="etiqueta">Tipo</span>
+      <div class="tipos-contenedor">
+        @for (tipo of pokemonDetalles.types; track tipo.type.name) {
+          <span class="badge-tipo">{{ tipo.type.name }}</span>
+        }
+      </div>
+    </div>
+
+    <div class="dato-fila">
+      <span class="etiqueta">Altura</span>
+      <span class="valor">{{ pokemonDetalles.height / 10 }} m</span>
+    </div>
+
+    <div class="dato-fila">
+      <span class="etiqueta">Peso</span>
+      <span class="valor">{{ pokemonDetalles.weight / 10 }} kg</span>
+    </div>
+
+    @for (stat of pokemonDetalles.stats; track stat.stat.name) {
+      <div class="dato-fila stat-fila">
+        <span class="etiqueta etiqueta-stat">{{ stat.stat.name }}</span>
+        <div class="barra-contenedor">
+          <div 
+            class="barra-relleno"
+            [style.width.%]="stat.base_stat"
+            [style.backgroundColor]="obtenerColorBarra(stat.base_stat)">
+          </div>
+          <span class="stat-numero">{{ stat.base_stat }}</span>
+        </div>
+      </div>
+    }
+
+    <div class="dato-fila historia-fila">
+      <span class="etiqueta">Historia</span>
+      <p class="historia-texto">{{ historiaEspanol }}</p>
+    </div>
+
+  </div>
+}

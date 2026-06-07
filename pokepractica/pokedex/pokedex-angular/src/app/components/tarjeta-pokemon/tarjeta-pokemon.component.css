@@ -1,0 +1,27 @@
+.tarjeta-pequena {
+  /* Diseño minimalista para que quepan muchas en la lista lateral */
+  background-color: white;
+  border-radius: 8px;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.2s;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.tarjeta-pequena:hover {
+  background-color: var(--azul-pantalla);
+  color: white;
+  transform: translateX(5px); /* Salta un poco a la derecha */
+}
+
+.tarjeta-pequena h3 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.icon-aviso {
+  color: #888;
+}

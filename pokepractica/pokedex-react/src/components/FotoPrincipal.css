@@ -1,0 +1,31 @@
+.marco-principal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  height: 50%;
+}
+
+.vacio {
+  color: white;
+  font-size: 1.2rem;
+}
+
+.nombre-grande {
+  color: #ffcb05;
+  text-shadow: 2px 2px 4px black;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  font-size: 2rem;
+}
+
+.foto-gigante {
+  width: 100%;
+  max-width: 300px;
+  background-color: var(--blanco-texto);
+  border: 10px solid #ddd;
+  border-radius: 20px;
+  image-rendering: pixelated;
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}

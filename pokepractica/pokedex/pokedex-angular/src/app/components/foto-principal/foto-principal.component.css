@@ -1,0 +1,32 @@
+.marco-principal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+
+.nombre-grande {
+  color: #ffcb05; /* Amarillo Pokéball */
+  text-shadow: 2px 2px 4px black;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.marco-principal img {
+  /* Imagen gigante que ocupa el 80% del ancho del panel izquierdo */
+  width: 80%;
+  max-width: 400px;
+  border-radius: 20px;
+  /* El efecto retro que menciona el video: mantiene los píxeles marcados */
+  image-rendering: pixelated; 
+  box-shadow: 0 0 30px rgba(0,0,0,0.8);
+}
+.imagen-clickeable {
+  cursor: pointer;
+  transition: transform 0.1s;
+}
+
+.imagen-clickeable:active {
+  transform: scale(0.95); /* Se "aprieta" al hacer click */
+}

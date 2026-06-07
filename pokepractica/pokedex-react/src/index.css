@@ -1,0 +1,14 @@
+:root {
+  --rojo-pokedex: #dc0a2d;
+  --azul-pantalla: #51aece;
+  --blanco-texto: #fefefe;
+  --gris-oscuro: #222224;
+}
+
+body {
+  margin: 0; 
+  font-family: 'Lucida Sans', sans-serif;
+  background-color: var(--gris-oscuro);
+  height: 100vh;
+  overflow: hidden; /* Evita que toda la página tenga scroll */
+}

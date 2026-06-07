@@ -1,0 +1,12 @@
+<div class="marco-principal">
+  @if (pokemonDetalles) {
+    <h2 class="nombre-grande">{{ pokemonDetalles.name | titlecase }} - N°.{{ pokemonDetalles.id }}</h2>
+    
+    <img [src]="pokemonDetalles.sprites.front_default" [alt]="pokemonDetalles.name"
+    (click)="reproducirGrito()"
+    class="imagen-clickeable">
+
+  } @else {
+    <p>Selecciona un Pokémon de la lista lateral.</p>
+  }
+</div>

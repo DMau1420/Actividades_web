@@ -1,0 +1,18 @@
+/* You can add global styles to this file, and also import other style files */
+/* Variables de color de la Pokédex */
+:root {
+  --rojo-pokedex: #dc0a2d;
+  --azul-pantalla: #51aece;
+  --blanco-texto: #fefefe;
+  --gris-oscuro: #222224;
+}
+
+/* Reseteo del navegador */
+body {
+  margin: 0; 
+  font-family: 'Lucida Sans', sans-serif;
+  background-color: var(--gris-oscuro);
+  /* Obligamos a que el body ocupe todo el alto de la pantalla */
+  height: 100vh;
+  overflow: hidden; /* Evitamos el scroll en todo el cuerpo */
+}

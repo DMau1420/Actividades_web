@@ -1,0 +1,35 @@
+<main class="contenedor-principal">
+  
+  <header class="cabecera">
+    <h1>Pokédex Angular 17+</h1>
+    <input 
+      class="buscador"
+      type="text"
+      placeholder="🔍 Buscar Pokémon..."
+      [ngModel]="textoBusqueda()"
+      (ngModelChange)="textoBusqueda.set($event)">
+  </header>
+
+  <section class="paneles-divididos">
+    
+    <div class="panel-izquierdo">
+      <app-foto-principal [pokemonDetalles]="pokemonSeleccionadoDetalles()"></app-foto-principal>
+      <app-detalle-panel [pokemonDetalles]="pokemonSeleccionadoDetalles()"></app-detalle-panel>
+    </div>
+
+    <div class="panel-derecho" (scroll)="onScroll($event)">
+      @for (poke of listaFiltrada(); track poke.name) {
+        <app-tarjeta-pokemon 
+          [nombrePokemon]="poke.name"
+          (tarjetaClickeada)="seleccionarPokemon($event)">
+        </app-tarjeta-pokemon>
+      }
+
+      @if (cargando()) {
+        <p style="text-align:center; padding:10px; color:#888;">Cargando...</p>
+      }
+    </div>
+
+  </section>
+
+</main>
